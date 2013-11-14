@@ -16,9 +16,3 @@ class TestSnowballStemmerSentence(TestCase):
 
     def test_result(self):
         self.assertEqual(self.subject.result(), [u'szeretne'])
-
-    def test_result_msg(self):
-        self.assertEqual(self.subject.result_msg(), [u'szeretne'])
-
-    def test_pretty_result_msg(self):
-        self.assertEqual(self.subject.pretty_result_msg(), [u"0. 'szeretne'"])
