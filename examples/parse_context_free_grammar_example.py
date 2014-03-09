@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals, division
 import codecs
-
 from nltk import parse_cfg
 from nltk import word_tokenize
 from nltk import RecursiveDescentParser
@@ -20,7 +19,7 @@ VP -> 'szereti'
 parsed_cfg = parse_cfg(cfg)
 
 parser = RecursiveDescentParser(parsed_cfg)
-uni_text = encode('Péter szereti Marit', 'utf8')
+uni_text = encode('Péter szereti Marit')
 sentence = word_tokenize(uni_text)
 
 print parser.parse(sentence)
