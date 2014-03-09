@@ -11,9 +11,9 @@ def encode(string, char_type='utf8', errors=''):
     return codecs.encode(string, char_type, errors)
 
 cfg = encode("""
-S -> NP VP NP
-NP -> 'Péter' | 'Marit'
-VP -> 'szereti'
+S -> NP VP NP | NP VP
+NP -> 'Péter' | 'Marit' | e
+VP -> 'szereti' | e
 """)
 
 parsed_cfg = parse_cfg(cfg)
