@@ -31,3 +31,4 @@ class SnowballStemmerSentence:
 
     def __stemming_actual_word(self, word):
         return self.stemmer.stem(word)
+
