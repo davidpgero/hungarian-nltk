@@ -1,0 +1,9 @@
+# hun_dp.fcfg
+% start DP
+DP -> Det[MGH=?sz] N[MGH=?sz]
+Det -> 'egy' | e
+Det[MGH=1] -> 'az'
+Det[MGH=0] -> 'a'
+N[MGH=1] -> 'ember'
+N[MGH=0] -> 'kutya'
+e        ->

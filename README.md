@@ -15,6 +15,9 @@ $ conda build .
 ## Context free grammar
 ![Peter and Mari](/images/peter_mari.png?raw=true "Peter and Mari")
 
+## FCFG
+![FCFG](/images/fcfg.png?raw=true "FCFG")
+
 ## Regexp stemmer
 | word,stem      |
 |----------------|
