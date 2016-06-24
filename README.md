@@ -1,10 +1,10 @@
-# hungarian-nltk
+# Hungarian NLTK
 
 Examples of Hungarian Sentence Analysis with NLTK
 
 # Install
 ```bash
-conda build .
+$ conda build .
 ```
 
 # Examples
@@ -35,13 +35,13 @@ conda build .
 
 ## Unigramm Tagger
 ```bash
-python examples/unigramm_tagger.py
+$ python examples/unigramm_tagger.py
 [('Péter', 'N'), ('Enikő', 'N'), ('szeret', 'V'), ('Marit', 'Nacc')]
 ```
 
 ## Work tokenizer
 ```bash
-python examples/word_tokenizer_example.py
+$ python examples/word_tokenizer_example.py
 Szeretnék
 kérni
 tőled
