@@ -55,10 +55,10 @@ szívességet
 ```
 
 ## Semantic
-A `True` sentence: `Egy asztal poros`
+A `True` sentence: `Egy asztal poros` ~> `a table is dusty`
 
 ```bash
-The sentence: 'egy asztal poros' ~> `table is dusty`
+The sentence: 'egy asztal poros'
 The parsed tree: '(S[SEM=<exists x.(-elo(x) & -cselekvo(x))>]
   (NP[SEM=<\P.exists x.(-elo(x) & P(x))>]
     (Det[SEM=<\Q P.exists x.(Q(x) & P(x))>] egy)
@@ -68,7 +68,7 @@ The semantic formula: 'exists x.(-elo(x) & -cselekvo(x))'
 The semantic value: 'True'
 ```
 
-A `False` sentence: `egy asztal fut` ~> `table runs`
+A `False` sentence: `egy asztal fut` ~> `a table runs`
 
 ```bash
 The sentence: 'egy asztal fut'
