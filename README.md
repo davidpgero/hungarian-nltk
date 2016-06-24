@@ -44,7 +44,7 @@ $ python examples/unigramm_tagger.py
 
 ## Work tokenizer
 ```bash
-$ python examples/word_tokenizer_example.py
+$ python examples/word_tokenizer.py
 Szeretnék
 kérni
 tőled
@@ -52,4 +52,31 @@ egy
 óriási
 szívességet
 .
+```
+
+## Semantic
+A `True` sentence: `Egy asztal poros`
+
+```bash
+The sentence: 'egy asztal poros' ~> `table is dusty`
+The parsed tree: '(S[SEM=<exists x.(-elo(x) & -cselekvo(x))>]
+  (NP[SEM=<\P.exists x.(-elo(x) & P(x))>]
+    (Det[SEM=<\Q P.exists x.(Q(x) & P(x))>] egy)
+    (N[SEM=<\x.-elo(x)>] asztal))
+  (VP[SEM=<\x.-cselekvo(x)>] (V[SEM=<\x.-cselekvo(x)>] poros)))'
+The semantic formula: 'exists x.(-elo(x) & -cselekvo(x))'
+The semantic value: 'True'
+```
+
+A `False` sentence: `egy asztal fut` ~> `table runs`
+
+```bash
+The sentence: 'egy asztal fut'
+The parsed tree: '(S[SEM=<exists x.(-elo(x) & cselekvo(x))>]
+  (NP[SEM=<\P.exists x.(-elo(x) & P(x))>]
+    (Det[SEM=<\Q P.exists x.(Q(x) & P(x))>] egy)
+    (N[SEM=<\x.-elo(x)>] asztal))
+  (VP[SEM=<\x.cselekvo(x)>] (V[SEM=<\x.cselekvo(x)>] fut)))'
+The semantic formula: 'exists x.(-elo(x) & cselekvo(x))'
+The semantic value: 'False'
 ```

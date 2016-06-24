@@ -1,0 +1,9 @@
+%start S
+S[SEM=<?subj(?vp)>] -> NP[SEM=?subj] VP[SEM=?vp]
+VP[SEM=?v] -> V[SEM=?v]
+NP[SEM=<?det(?n)>] -> Det[SEM=?det] N[SEM=?n]
+Det[SEM=<\Q P.exists x.(Q(x) & P(x))>] -> 'egy'
+N[SEM=<\x.elo(x)>] -> 'ember'
+N[SEM=<\x.-elo(x)>] -> 'asztal'
+V[SEM=<\x.cselekvo(x)>] -> 'fut'
+V[SEM=<\x.-cselekvo(x)>] -> 'poros'
