@@ -1,27 +1,19 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals, division
-from nltk import parse_cfg
-from nltk import ChartParser
 from random import randint
+from nltk import load_parser
 
-example = "ab" * randint(1, 5)
 
-cfg = """
-S -> A B
-A -> 'a'
-B -> 'b' || 'b' S
-"""
+if __name__ == '__main__':
+    example = "ab" * randint(1, 5)
+    parser = load_parser('file:data/ab.cfg', 3)
 
-parsed_cfg = parse_cfg(cfg)
+    each_chars = [x for x in example]
+    tree = parser.parse(each_chars)
 
-parser = ChartParser(parsed_cfg, trace=3)
 
-each_chars = [x for x in example]
-tree = parser.parse(each_chars)
+    print(tree)
 
-print tree
-
-# If you'd like to see Tree, uncomment above two lines.
-#from nltk.draw.tree import draw_trees
-#draw_trees(tree)
+    # If you'd like to see Tree, uncomment above line.
+    # list(tree)[0].draw()
