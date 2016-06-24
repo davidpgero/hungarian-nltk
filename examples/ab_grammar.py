@@ -12,8 +12,4 @@ if __name__ == '__main__':
     each_chars = [x for x in example]
     tree = parser.parse(each_chars)
 
-
-    print(tree)
-
-    # If you'd like to see Tree, uncomment above line.
-    # list(tree)[0].draw()
+    list(tree)[0].draw()
