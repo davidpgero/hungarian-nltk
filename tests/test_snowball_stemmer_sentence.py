@@ -6,6 +6,7 @@ from unittest import TestCase
 
 from lib.snowball_stemmer_sentence import SnowballStemmerSentence
 
+
 class TestSnowballStemmerSentence(TestCase):
     def setUp(self):
         self.test_data = ["Szeretném"]

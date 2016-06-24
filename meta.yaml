@@ -1,0 +1,84 @@
+package:
+  name: nltk
+  version: "3.2.1"
+
+source:
+  fn: nltk-3.2.1.tar.gz
+  url: https://files.pythonhosted.org/packages/58/85/8fa6f8c488507aab7d6234ce754bbbe61bfeb8382489785e2d764bf8f52a/nltk-3.2.1.tar.gz
+  md5: 27d84d2d11449d709ccd1deac18deb05
+#  patches:
+   # List any patch files here
+   # - fix.patch
+
+# build:
+  # noarch_python: True
+  # preserve_egg_dir: True
+  # entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - nltk = nltk:main
+    #
+    # Would create an entry point called nltk that calls nltk.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  # Python imports
+  imports:
+    - nltk
+    - nltk.app
+    - nltk.ccg
+    - nltk.chat
+    - nltk.chunk
+    - nltk.classify
+    - nltk.cluster
+    - nltk.corpus
+    - nltk.corpus.reader
+    - nltk.draw
+    - nltk.inference
+    - nltk.metrics
+    - nltk.misc
+    - nltk.parse
+    - nltk.sem
+    - nltk.sentiment
+    - nltk.stem
+    - nltk.tag
+    - nltk.tbl
+    - nltk.test
+    - nltk.test.unit
+    - nltk.test.unit.translate
+    - nltk.tokenize
+    - nltk.translate
+    - nltk.twitter
+
+  # commands:
+    # You can put test commands to be run here.  Use this to test that the
+    # entry points work.
+
+
+  # You can also put a file called run_test.py in the recipe that will be run
+  # at test time.
+
+  requires:
+    - nose
+
+about:
+  home: http://nltk.org/
+  license: Apache Software License
+  summary: 'Natural Language Toolkit'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
