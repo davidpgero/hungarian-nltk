@@ -10,7 +10,7 @@ Examples of Hungarian Sentence Analysis with [NLTK](http://www.nltk.org/ "NLTK")
 
 ## Install with Conda
 ```bash
-$ conda build .
+conda build .
 ```
 
 ## Install without Anaconda
