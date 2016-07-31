@@ -4,8 +4,9 @@ Examples of Hungarian Sentence Analysis with [NLTK](http://www.nltk.org/ "NLTK")
 
 # Install
 ## Prerequisite
+
 * I recommend to use [Anaconda](https://www.continuum.io/downloads "Anaconda 3")
-** Python `~> 3.5`
+* Python `~> 3.5` (It includes in Anaconda 3)
 
 ## Install with Conda
 ```bash
