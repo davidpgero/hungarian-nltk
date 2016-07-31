@@ -1,10 +1,20 @@
 # Hungarian NLTK
 
-Examples of Hungarian Sentence Analysis with NLTK
+Examples of Hungarian Sentence Analysis with [NLTK](http://www.nltk.org/ "NLTK") `~> 3.2.1`
 
 # Install
+## Prerequisite
+* I recommend to use [Anaconda](https://www.continuum.io/downloads "Anaconda 3")
+** Python `~> 3.5`
+
+## Install with Conda
 ```bash
 $ conda build .
+```
+
+## Install without Anaconda
+```bash
+easy_install install nltk
 ```
 
 # Examples
