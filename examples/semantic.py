@@ -8,10 +8,10 @@ if __name__ == '__main__':
     valuation_describe = [
         ('ember', 'e'),
         ('asztal', 'a'),
-        (['elo', set('e')]),
-        (['!elo', set('a')]),
-        (['cselekvo', set('e')]),
-        (['!cselekvo', set('a')])
+        (['alive', set('e')]),
+        (['!alive', set('a')]),
+        (['agent', set('e')]),
+        (['!agent', set('a')])
     ]
 
     valuation = Valuation(valuation_describe)
