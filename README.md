@@ -70,12 +70,12 @@ A `True` sentence: `Egy asztal poros` ~> `a table is dusty`
 
 ```bash
 The sentence: 'egy asztal poros'
-The parsed tree: '(S[SEM=<exists x.(-elo(x) & -cselekvo(x))>]
-  (NP[SEM=<\P.exists x.(-elo(x) & P(x))>]
+The parsed tree: '(S[SEM=<exists x.(-alive(x) & -agent(x))>]
+  (NP[SEM=<\P.exists x.(-alive(x) & P(x))>]
     (Det[SEM=<\Q P.exists x.(Q(x) & P(x))>] egy)
-    (N[SEM=<\x.-elo(x)>] asztal))
-  (VP[SEM=<\x.-cselekvo(x)>] (V[SEM=<\x.-cselekvo(x)>] poros)))'
-The semantic formula: 'exists x.(-elo(x) & -cselekvo(x))'
+    (N[SEM=<\x.-alive(x)>] asztal))
+  (VP[SEM=<\x.-agent(x)>] (V[SEM=<\x.-agent(x)>] poros)))'
+The semantic formula: 'exists x.(-alive(x) & -agent(x))'
 The semantic value: 'True'
 ```
 
@@ -83,11 +83,11 @@ A `False` sentence: `egy asztal fut` ~> `a table runs`
 
 ```bash
 The sentence: 'egy asztal fut'
-The parsed tree: '(S[SEM=<exists x.(-elo(x) & cselekvo(x))>]
-  (NP[SEM=<\P.exists x.(-elo(x) & P(x))>]
+The parsed tree: '(S[SEM=<exists x.(-alive(x) & agent(x))>]
+  (NP[SEM=<\P.exists x.(-alive(x) & P(x))>]
     (Det[SEM=<\Q P.exists x.(Q(x) & P(x))>] egy)
-    (N[SEM=<\x.-elo(x)>] asztal))
-  (VP[SEM=<\x.cselekvo(x)>] (V[SEM=<\x.cselekvo(x)>] fut)))'
-The semantic formula: 'exists x.(-elo(x) & cselekvo(x))'
+    (N[SEM=<\x.-alive(x)>] asztal))
+  (VP[SEM=<\x.agent(x)>] (V[SEM=<\x.agent(x)>] fut)))'
+The semantic formula: 'exists x.(-alive(x) & agent(x))'
 The semantic value: 'False'
 ```
