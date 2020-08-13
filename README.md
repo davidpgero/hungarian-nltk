@@ -2,6 +2,8 @@
 
 Examples of Hungarian Sentence Analysis with [NLTK](http://www.nltk.org/ "NLTK") `~> 3.2.1`
 
+> Gerő Dávid Péter (2014) Egyszerű magyar mondatok kezelése NLTK környezetben. BA/BSc, Szegedi Tudományegyetem. [http://diploma.bibl.u-szeged.hu/51272/]
+
 # Install
 ## Prerequisite
 
@@ -30,22 +32,22 @@ easy_install install nltk
 ![FCFG](/images/fcfg.png?raw=true "FCFG")
 
 ## Regexp stemmer
-| word,stem      |
-|----------------|
-| Péter,Péter    |
-| szereti,szeret |
-| Enikőt,Enikő   |
-| és,és          |
-| Marit,Mari     |
+Word | Stem
+--- | ---
+Péter | Péter
+szereti | szeret
+Enikőt | Enikő
+és | és
+Marit | Mari
 
 ## Snowball stemmer
-| word,stem      |
-|----------------|
-| Péter,péter    |
-| szereti,szeret |
-| Enikőt,enikő   |
-| és,és          |
-| Marit,mar      |
+Word | Stem
+--- | ---
+Péter| péter
+szereti | szeret
+Enikőt | enikő
+és | és
+Marit | mar
 
 ## Unigramm Tagger
 ```bash
